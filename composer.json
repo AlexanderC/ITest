@@ -1,0 +1,21 @@
+{
+    "name": "pyhalibs/itest",
+    "type": "library",
+    "description": "Pyha Framework ITest Library",
+    "keywords": ["pyha", "framework", "testing", "tdd"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AlexanderC",
+            "email": "alexander.moldova@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-0": { "Pyha\\Libs\\ITest\\": "lib/" },
+        "classmap": [  ]
+    },
+    "minimum-stability": "dev"
+}
