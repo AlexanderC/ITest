@@ -130,7 +130,7 @@ recursively and add your "things" to be tested by yourself
 Loading library
 ------------
 
-If you are not using Composer
+If you are not using Composer you may add to autoloader the lib path or even include the files manualy
 
 Installing via Composer
 --------------------
