@@ -127,12 +127,12 @@ This should be placed in an shutdown function or something like this.
 But of course you can add classes and function manually or even scan directories
 recursively and add your "things" to be tested by yourself
 
-Load library
+Loading library
 ------------
 
 If you are not using Composer
 
-Install via Composer
+Installing via Composer
 --------------------
 
 To install it via composer just use following command:
