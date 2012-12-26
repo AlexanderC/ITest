@@ -97,6 +97,30 @@ You may understand all the thing by analyzing the following example:
         return $a + $b + $c[0];
     }
 
+How do i run my tests?
+----------------------
+
+The answer is in the code bellow:
+
+    $tester = new Libs\ITest\Test();
+
+                    $classes = get_declared_classes();
+                    foreach($classes as $class) {
+                        $tester->addClass($class);
+                    }
+                    unset($classes);
+
+                    $functions = get_defined_functions()['user'];
+                    foreach($functions as $function) {
+                        $tester->addFunction($function);
+                    }
+                    unset($functions);
+
+                    $tester->run();
+
+                    if(count($tester->getFails()) > 0) {
+                        exit(nl2br("\n\n{$tester}"));
+                    }
 
 Load library
 ------------
