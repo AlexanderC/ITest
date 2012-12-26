@@ -104,23 +104,28 @@ The answer is in the code bellow:
 
     $tester = new Libs\ITest\Test();
 
-                    $classes = get_declared_classes();
-                    foreach($classes as $class) {
-                        $tester->addClass($class);
-                    }
-                    unset($classes);
+    $classes = get_declared_classes();
+    foreach($classes as $class) {
+         $tester->addClass($class);
+    }
+    unset($classes);
 
-                    $functions = get_defined_functions()['user'];
-                    foreach($functions as $function) {
-                        $tester->addFunction($function);
-                    }
-                    unset($functions);
+    $functions = get_defined_functions()['user'];
+    foreach($functions as $function) {
+        $tester->addFunction($function);
+    }
+    unset($functions);
 
-                    $tester->run();
+    $tester->run();
 
-                    if(count($tester->getFails()) > 0) {
-                        exit(nl2br("\n\n{$tester}"));
-                    }
+    if(count($tester->getFails()) > 0) {
+        exit(nl2br("\n\n{$tester}"));
+    }
+
+This will run the tests for all your function and classes loaded in current session.
+This should be placed in an shutdown function or something like this.
+But of course you can add classes and function manually or even scan directories
+recursively and add your "things" to be tested by yourself
 
 Load library
 ------------
